@@ -1,56 +1,106 @@
 # Try Postgres
 
-## Run `Postgres` and `pgAdmin`
+- [Required steps](#required-steps)
+  - [1. Install `Docker Compose`](#1-install-docker-compose)
+  - [2. Clone this repo](#2-clone-this-repo)
+  - [3. Open the lab directory](#3-open-the-lab-directory)
+  - [4. Create a `.env` file](#4-create-a-env-file)
+  - [5. Run containers](#5-run-containers)
+  - [6. Connect `pgAdmin` to the database](#6-connect-pgadmin-to-the-database)
+  - [7. Run queries via `pgAdmin`](#7-run-queries-via-pgadmin)
+- [Optional steps](#optional-steps)
+  - [1. Install `VS Code`](#1-install-vs-code)
+  - [2. Connect to the database using `VS Code`](#2-connect-to-the-database-using-vs-code)
+    - [Connect using `ms-ossdata.vscode-pgsql`](#connect-using-ms-ossdatavscode-pgsql)
+    - [Connect using `mtxr.sqltools`](#connect-using-mtxrsqltools)
 
-1. Install [Docker](https://docs.docker.com/engine/install/).
-2. Change the directory to `lab-1`.
+## Required steps
 
-    ```console
-    cd compose
-    ```
+> [!NOTE]
+> Run commands in `terminal` code blocks in a terminal.
 
-3. Create a `.env` file from the example.
+### 1. Install `Docker Compose`
 
-    ```console
-    cp .env.example .env
-    ```
+1. Install [`Docker Compose`](https://docs.docker.com/compose/install).
 
-4. Edit the `.env` file as necessary.
-5. Run `Postgres` and `pgAdmin`:
+### 2. Clone this repo
+
+1. Open a terminal (`bash`, `zsh`, `PowerShell`, etc.).
+2. Clone this repo.
+
+   ```terminal
+   git clone https://github.com/deemp/s26-databases
+   ```
+
+### 3. Open the lab directory
+
+1. Run using the terminal:
+
+   ```terminal
+   cd s26-databases/lab-4
+   ```
+
+### 4. Create a `.env` file
+
+1. Create a `.env` file from the example.
+
+   ```terminal
+   cp .env.example .env
+   ```
+
+2. Edit the `.env` file as necessary.
+
+### 5. Run containers
+
+1. Run `Postgres` and `pgAdmin`:
   
-  ```console
+  ```terminal
   docker compose up
   ```
 
-## Connect `pgAdmin` to the database
+### 6. Connect `pgAdmin` to the database
 
-1. [Run `Postgres` and `pgAdmin`](#run-postgres-and-pgadmin).
-2. Open `pgAdmin` at `localhost:45050`.
-3. Log in with `PGADMIN_DEFAULT_EMAIL` and `PGADMIN_DEFAULT_PASSWORD` (see values in `.env`)
-4. Click `Add New Server`.
-5. In `General`, set:
+1. Open `pgAdmin` at `localhost:45050`.
+2. Log in:
+   1. Login: the value of `POSTGRES_USER` defined in `.env`
+   2. Password: the value of `PGADMIN_DEFAULT_PASSWORD` defined in `.env`.
+3. Click `Add New Server`.
+4. In `General`, set:
    - `Name`: `postgres`
-6. In `Connection`, set:
+5. In `Connection`, set:
    - `Host name/address`: `postgres` (service name created by `Docker`)
    - `Port`: `5432` (the value of `POSTGRES_PORT` defined in `.env`)
    - `Maintenance database`: `postgres` (the value of `POSTGRES_DB` defined in `.env`)
    - `Username`: `postgres` (the value of `POSTGRES_USER` defined in `.env`)
    - `Password`: `postgres` (the value of `POSTGRES_PASSWORD` defined in `.env`)
-7. Click `Save`.
+6. Click `Save`.
 
-## Run queries via `pgAdmin`
+### 7. Run queries via `pgAdmin`
 
-1. [Connect `pgAdmin` to the database](#connect-pgadmin-to-the-database).
-2. In `Default Workspace` -> `Object Explorer` -> `Servers` -> `postgres` -> `Databases`, right-click `postgres` and then click `Query Tool`.
-3. Write `SQL`.
-4. Click `Execute Script`
+1. Go to `Default Workspace`.
+2. Go to `Object Explorer`.
+3. Go to `Servers`.
+4. Go to `postgres`.
+5. Go to `Databases`.
+6. Right-click `postgres`.
+7. Click `Query Tool`.
+8. Write `SQL`.
+9. Click `Execute Script`.
 
-## Connect to the database via `VS Code`
+## Optional steps
 
-1. [Run `Postgres`](#run-postgres-and-pgadmin).
-2. [Install](https://code.visualstudio.com/download) `VS Code`.
+### 1. Install `VS Code`
 
-## Connect `VS Code` to the database using `ms-ossdata.vscode-pgsql`
+See `VS Code` [installation instructions](https://code.visualstudio.com/download>).
+
+### 2. Connect to the database using `VS Code`
+
+Connect using any of these methods:
+
+- [Connect using `ms-ossdata.vscode-pgsql`](#connect-using-ms-ossdatavscode-pgsql).
+- [Connect using `mtxr.sqltools`](#connect-using-mtxrsqltools).
+
+#### Connect using `ms-ossdata.vscode-pgsql`
 
 1. Install the [`ms-ossdata.vscode-pgsql`](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-pgsql) extension.
 2. In `VS Code` -> `Activity Bar`, click `PostgreSQL`.
@@ -70,7 +120,7 @@
      - `SSL MODE`: `Disable`
 7. Click `Save and connect`.
 
-## Connect `VS Code` to the database using `mtxr.sqltools`
+#### Connect using `mtxr.sqltools`
 
 1. Install the [`mtxr.sqltools`](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools) extension.
 2. Open `VS Code`.
