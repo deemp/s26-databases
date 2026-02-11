@@ -1,0 +1,68 @@
+@startuml
+
+' Turn on Crow's Foot notation
+hide circle
+skinparam linetype ortho
+
+title University Database ER Diagram
+
+entity "Student" as student {
+  *student_id : INTEGER <<PK>>
+  --
+  *program_id : INTEGER <<FK>>
+  given_names : VARCHAR(255)
+  surname : VARCHAR(255)
+  date_of_birth : DATE
+  year_enrolled : INTEGER
+}
+
+entity "Program" as program {
+  *program_id : INTEGER <<PK>>
+  --
+  name : VARCHAR(255)
+  total_credit_points : INTEGER
+  commence_year : INTEGER
+}
+
+entity "Course" as course {
+  *course_id : VARCHAR(20) <<PK>>
+  --
+  name : VARCHAR(255)
+  credit_point_value : INTEGER
+  commence_year : INTEGER
+}
+
+' Associative Entity for Program-Course relationship (Curriculum/Sequence)
+entity "Program Curriculum" as curriculum {
+  *program_id : INTEGER <<FK>>
+  *course_id : VARCHAR(20) <<FK>>
+  --
+  *sequence_year : INTEGER
+  *sequence_semester : INTEGER
+}
+
+' Associative Entity for Student-Course relationship (Transcript/Grades)
+entity "Student Enrollment" as enrollment {
+  *enrollment_id : INTEGER <<PK>>
+  *student_id : INTEGER <<FK>>
+  *course_id : VARCHAR(20) <<FK>>
+  --
+  attempt_year : INTEGER
+  attempt_semester : VARCHAR(20)
+  grade : VARCHAR(2)
+  mark : INTEGER
+}
+
+' Relationships
+' A student must enroll in a program (Many-to-One)
+program ||--|{ student : "enrolls"
+
+' A program consists of courses (Many-to-Many resolved by Curriculum)
+program ||--o{ curriculum : "defines"
+course ||--o{ curriculum : "includes"
+
+' A student takes courses (Many-to-Many resolved by Enrollment)
+student ||--o{ enrollment : "takes"
+course ||--o{ enrollment : "is taken by"
+
+@enduml

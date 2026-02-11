@@ -1,0 +1,52 @@
+@startuml
+
+' Set diagram style for ERD
+hide circle
+skinparam linetype ortho
+skinparam shadowing false
+
+entity "Artist" as artist {
+  *artist_id : INTEGER <<generated>>
+  --
+  *name : VARCHAR(255)
+}
+
+entity "Album" as album {
+  *album_id : INTEGER <<generated>>
+  --
+  *artist_id : INTEGER <<FK>>
+  *name : VARCHAR(255)
+}
+
+entity "Track" as track {
+  *track_id : INTEGER <<generated>>
+  --
+  *album_id : INTEGER <<FK>>
+  *name : VARCHAR(255)
+  *length_seconds : INTEGER
+}
+
+entity "Playback" as playback {
+  *playback_id : INTEGER <<generated>>
+  --
+  *track_id : INTEGER <<FK>>
+  *played_at : DATETIME
+}
+
+' || - one and only one
+' |{ - one or many
+' 0{ - zero or many
+
+' Relationships
+' "An artist produces one or more albums"
+' "An album is made by exactly one artist"
+artist ||--|{ album : "produces"
+
+' "An album contains one or more tracks"
+' "Each track belongs to exactly one album"
+album ||--|{ track : "contains"
+
+' "When a track is played, the date and time... should be recorded"
+track ||--o{ playback : "is played in"
+
+@enduml
