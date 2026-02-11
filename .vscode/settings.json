@@ -1,15 +1,27 @@
 {
-    "sqltools.connections": [
-        {
-            "ssh": "Disabled",
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 45432,
-            "driver": "PostgreSQL",
-            "name": "postgres",
-            "group": "Servers",
-            "database": "postgres",
-            "username": "postgres"
-        }
-    ]
+  "sqltools.connections": [
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 45432,
+      "driver": "PostgreSQL",
+      "name": "postgres",
+      "group": "Servers",
+      "database": "postgres",
+      "username": "postgres"
+    }
+  ],
+
+  "plantuml.server": "http://localhost:48080/",
+  "plantuml.render": "PlantUMLServer",
+  "plantuml.diagramsRoot": "docs/diagrams/src",
+  "plantuml.exportOutDir": "docs/diagrams/out",
+  "git.autofetch": true,
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  }
 }
