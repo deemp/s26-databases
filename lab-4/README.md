@@ -107,7 +107,7 @@
 5. Go to `Databases`.
 6. Right-click `postgres`.
 7. Click `Query Tool`.
-8. Write `SQL`.
+8. Write `SQL` (e.g., to solve a lab task).
 9. Click `Execute Script`.
 
 ## Optional steps
