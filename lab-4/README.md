@@ -25,18 +25,18 @@
 ## Connect `pgAdmin` to the database
 
 1. [Run `Postgres` and `pgAdmin`](#run-postgres-and-pgadmin).
-1. Open `pgAdmin` at `localhost:45050`.
-1. Log in with `PGADMIN_DEFAULT_EMAIL` and `PGADMIN_DEFAULT_PASSWORD` (defined in `.env`)
-1. Click `Add New Server`.
-1. In `General`, set:
+2. Open `pgAdmin` at `localhost:45050`.
+3. Log in with `PGADMIN_DEFAULT_EMAIL` and `PGADMIN_DEFAULT_PASSWORD` (see values in `.env`)
+4. Click `Add New Server`.
+5. In `General`, set:
    - `Name`: `postgres`
-1. In `Connection`, set:
+6. In `Connection`, set:
    - `Host name/address`: `postgres` (service name created by `Docker`)
    - `Port`: `5432` (the value of `POSTGRES_PORT` defined in `.env`)
    - `Maintenance database`: `postgres` (the value of `POSTGRES_DB` defined in `.env`)
    - `Username`: `postgres` (the value of `POSTGRES_USER` defined in `.env`)
    - `Password`: `postgres` (the value of `POSTGRES_PASSWORD` defined in `.env`)
-1. Click `Save`.
+7. Click `Save`.
 
 ## Run queries via `pgAdmin`
 
