@@ -16,6 +16,8 @@ The output:
 
 ## Lab 4
 
-1. Open the `VS Code Terminal`.
-2. Switch to the `lab-4` directory.
-3. Follow the instructions in [`lab-4/README.md`](./lab-4/README.md).
+1. Clone this repo.
+2. Open this repo in `VS Code`.
+3. Open the `VS Code Terminal`.
+4. Switch to the `lab-4` directory.
+5. Follow the instructions in [`lab-4/README.md`](./lab-4/README.md).
