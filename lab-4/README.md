@@ -5,9 +5,10 @@
   - [2. Clone this repo](#2-clone-this-repo)
   - [3. Open the lab directory](#3-open-the-lab-directory)
   - [4. Create a `.env` file](#4-create-a-env-file)
-  - [5. Run containers](#5-run-containers)
-  - [6. Connect `pgAdmin` to the database](#6-connect-pgadmin-to-the-database)
-  - [7. Run queries via `pgAdmin`](#7-run-queries-via-pgadmin)
+  - [5. Remove old containers](#5-remove-old-containers)
+  - [6. Run containers](#6-run-containers)
+  - [7. Connect `pgAdmin` to the database](#7-connect-pgadmin-to-the-database)
+  - [8. Run queries via `pgAdmin`](#8-run-queries-via-pgadmin)
 - [Optional steps](#optional-steps)
   - [1. Install `VS Code`](#1-install-vs-code)
   - [2. Connect to the database using `VS Code`](#2-connect-to-the-database-using-vs-code)
@@ -42,7 +43,9 @@
 
 ### 4. Create a `.env` file
 
-1. Create a `.env` file from the example.
+1. Create a `.env` file from the example:
+
+   Run using the terminal:
 
    ```terminal
    cp .env.example .env
@@ -50,15 +53,35 @@
 
 2. Edit the `.env` file as necessary.
 
-### 5. Run containers
+### 5. Remove old containers
 
-1. Run `Postgres` and `pgAdmin`:
+1. Stop containers:
+
+   Run using the terminal:
+
+   ```terminal
+   docker compose stop
+   ```
+
+2. Remove containers:
+
+   Run using the terminal:
+
+   ```terminal
+   docker compose rm
+   ```
+
+### 6. Run containers
+
+1. Run `Postgres` and `pgAdmin` containers:
+
+   Run using the terminal:
   
-  ```terminal
-  docker compose up
-  ```
+   ```terminal
+   docker compose up
+   ```
 
-### 6. Connect `pgAdmin` to the database
+### 7. Connect `pgAdmin` to the database
 
 1. Open `pgAdmin` at `localhost:45050`.
 2. Log in:
@@ -75,7 +98,7 @@
    - `Password`: `postgres` (the value of `POSTGRES_PASSWORD` defined in `.env`)
 6. Click `Save`.
 
-### 7. Run queries via `pgAdmin`
+### 8. Run queries via `pgAdmin`
 
 1. Go to `Default Workspace`.
 2. Go to `Object Explorer`.
