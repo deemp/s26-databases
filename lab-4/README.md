@@ -74,7 +74,7 @@
 
 ### 4. Create a `.env` file
 
-1. Create a `.env` file from the example:
+1. Copy the `.env.example` file to the `.env` file:
 
    Run using the terminal:
 
