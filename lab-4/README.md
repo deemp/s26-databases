@@ -51,6 +51,12 @@
    cp .env.example .env
    ```
 
+   If you use `Powershell`, run:
+
+   ```terminal
+   copy .env.example .env
+   ```
+
 2. Edit the `.env` file as necessary.
 
 ### 5. Remove old containers
@@ -83,7 +89,7 @@
 
 ### 7. Connect `pgAdmin` to the database
 
-1. Open `pgAdmin` at `localhost:45050`.
+1. Open `pgAdmin` in a browser: go to <http://localhost:45050>.
 2. Log in:
    1. Login: the value of `POSTGRES_USER` defined in `.env`
    2. Password: the value of `PGADMIN_DEFAULT_PASSWORD` defined in `.env`.
