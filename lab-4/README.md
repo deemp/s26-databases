@@ -91,7 +91,7 @@
 
 1. Open `pgAdmin` in a browser: go to <http://localhost:45050>.
 2. Log in:
-   1. Login: the value of `POSTGRES_USER` defined in `.env`
+   1. Login: the value of `PGADMIN_DEFAULT_EMAIL` defined in `.env`
    2. Password: the value of `PGADMIN_DEFAULT_PASSWORD` defined in `.env`.
 3. Click `Add New Server`.
 4. In `General`, set:
