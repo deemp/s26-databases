@@ -182,7 +182,9 @@
 4. Write an `SQL` script.
 5. Run the script:
 
-   Click `Execute Script`.
+   Click `Execute script`.
+
+   <img alt="Click postgres" src="./images/execute-script.png" style="width:400px"></img>
 
 ## 2. Optional steps
 
