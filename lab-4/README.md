@@ -29,7 +29,7 @@
 1. Install [`Docker Compose`](https://docs.docker.com/compose/install).
 
 > [!NOTE]
-> If you use Windows and need to install Linux, run in a terminal:
+> If you use `Windows` and need to install `Linux`, run in a terminal:
 >
 > ```terminal
 > wsl --install -d Ubuntu-24.04
