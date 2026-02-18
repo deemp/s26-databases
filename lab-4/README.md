@@ -9,7 +9,9 @@
   - [5. Remove old containers](#5-remove-old-containers)
   - [6. Run containers](#6-run-containers)
   - [7. Connect `pgAdmin` to the database](#7-connect-pgadmin-to-the-database)
-  - [8. Run queries via `pgAdmin`](#8-run-queries-via-pgadmin)
+  - [8. Go to `postgres`](#8-go-to-postgres)
+  - [9. Look at the ERD](#9-look-at-the-erd)
+  - [10. Run queries](#10-run-queries)
 - [Optional steps](#optional-steps)
   - [1. Install `VS Code`](#1-install-vs-code)
   - [2. Connect to the database using `VS Code`](#2-connect-to-the-database-using-vs-code)
@@ -143,7 +145,7 @@
    - `Password`: `postgres` (the value of `POSTGRES_PASSWORD` defined in `.env`)
 6. Click `Save`.
 
-### 8. Run queries via `pgAdmin`
+### 8. Go to `postgres`
 
 1. Go to `Default Workspace`.
 
@@ -154,10 +156,21 @@
 
    <img alt="Click postgres" src="./images/click-postgres.png" style="width:400px"></img>
 5. Unfold (click) `Databases`.
-6. Right-click `postgres`.
-7. Click `Query Tool`.
-8. Write an `SQL` script.
-9. Run the script:
+6. Unfold (click) `postgres`.
+
+### 9. Look at the ERD
+
+1. [Go to `postgres`](#8-go-to-postgres).
+2. Right-click `postgres`.
+3. Click `ERD for Database`.
+
+### 10. Run queries
+
+1. [Go to `postgres`](#8-go-to-postgres).
+2. Right-click `postgres`.
+3. Click `Query Tool`.
+4. Write an `SQL` script.
+5. Run the script:
 
    Click `Execute Script`.
 
