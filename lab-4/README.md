@@ -82,7 +82,7 @@
    cp .env.example .env
    ```
 
-   If you use `Powershell`, run:
+   If you use `PowerShell`, run:
 
    ```terminal
    copy .env.example .env
