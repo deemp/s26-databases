@@ -101,7 +101,7 @@
 
 ### 1.6. Remove old containers
 
-1. [Open the lab directory](#3-open-the-lab-directory).
+1. [Open the lab directory](#13-open-the-lab-directory).
 2. Stop containers:
 
    Run using the terminal:
@@ -167,13 +167,13 @@
 
 ### 1.10. Look at the ERD
 
-1. [Go to `postgres`](#8-go-to-postgres).
+1. [Go to `postgres`](#19-go-to-postgres).
 2. Right-click `postgres`.
 3. Click `ERD for Database`.
 
 ### 1.11. Run queries
 
-1. [Go to `postgres`](#8-go-to-postgres).
+1. [Go to `postgres`](#19-go-to-postgres).
 2. Right-click `postgres`.
 3. Click `Query Tool`.
 4. Write an `SQL` script.
@@ -191,8 +191,8 @@ See `VS Code` [installation instructions](https://code.visualstudio.com/download
 
 Connect using any of these methods:
 
-- [Connect using `ms-ossdata.vscode-pgsql`](#connect-using-ms-ossdatavscode-pgsql).
-- [Connect using `mtxr.sqltools`](#connect-using-mtxrsqltools).
+- [Connect using `ms-ossdata.vscode-pgsql`](#221-connect-using-ms-ossdatavscode-pgsql).
+- [Connect using `mtxr.sqltools`](#222-connect-using-mtxrsqltools).
 
 #### 2.2.1. Connect using `ms-ossdata.vscode-pgsql`
 
