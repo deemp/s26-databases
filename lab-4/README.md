@@ -88,6 +88,12 @@
    ```
 
 2. Wait 2-3 minutes until `pgAdmin` starts.
+3. If you need to run other commands use any of these options:
+   - Option 1: press `d` in the terminal where you run the containers.
+   - Option 2:
+     1. Open a new terminal.
+     2. Navigate there to the `s26-databases/lab-4` directory.
+
 ### 7. Connect `pgAdmin` to the database
 
 1. Open `pgAdmin` in a browser: go to <http://localhost:45050>.
