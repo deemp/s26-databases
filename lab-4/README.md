@@ -146,14 +146,20 @@
 ### 8. Run queries via `pgAdmin`
 
 1. Go to `Default Workspace`.
+
+   <img alt="Default workspace" src="./images/default-workspace.png" style="width:400px"></img>
 2. Go to `Object Explorer`.
 3. Go to `Servers`.
-4. Go to `postgres`.
-5. Go to `Databases`.
+4. Unfold (click) `postgres`.
+
+   <img alt="Click postgres" src="./images/click-postgres.png" style="width:400px"></img>
+5. Unfold (click) `Databases`.
 6. Right-click `postgres`.
 7. Click `Query Tool`.
-8. Write `SQL` code (e.g., to solve a lab task).
-9. Click `Execute Script`.
+8. Write an `SQL` script.
+9. Run the script:
+
+   Click `Execute Script`.
 
 ## Optional steps
 
