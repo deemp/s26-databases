@@ -49,6 +49,9 @@
 
 #### 1.2.1. Generate a token
 
+> [!NOTE]
+> Skip this step if `git` doesn't ask you for a password.
+
 1. Open in a browser <https://github.com/>.
 2. Click your profile icon in the top right corner.
 3. Click `Settings`.
