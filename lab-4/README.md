@@ -1,30 +1,30 @@
 # Try Postgres
 
-- [Required steps](#required-steps)
-  - [1. Install `Docker Compose`](#1-install-docker-compose)
-  - [2. Clone this repo](#2-clone-this-repo)
-    - [2.1 Generate a token](#21-generate-a-token)
-  - [3. Open the lab directory](#3-open-the-lab-directory)
-  - [4. Create a `.env` file](#4-create-a-env-file)
-  - [5. (If you use `Docker Desktop`) Start `Docker Engine`](#5-if-you-use-docker-desktop-start-docker-engine)
-  - [6. Remove old containers](#6-remove-old-containers)
-  - [7. Run containers](#7-run-containers)
-  - [8. Connect `pgAdmin` to the database](#8-connect-pgadmin-to-the-database)
-  - [9. Go to `postgres`](#9-go-to-postgres)
-  - [10. Look at the ERD](#10-look-at-the-erd)
-  - [11. Run queries](#11-run-queries)
-- [Optional steps](#optional-steps)
-  - [1. Install `VS Code`](#1-install-vs-code)
-  - [2. Connect to the database using `VS Code`](#2-connect-to-the-database-using-vs-code)
-    - [Connect using `ms-ossdata.vscode-pgsql`](#connect-using-ms-ossdatavscode-pgsql)
-    - [Connect using `mtxr.sqltools`](#connect-using-mtxrsqltools)
+- [1. Required steps](#1-required-steps)
+  - [1.1. Install `Docker Compose`](#11-install-docker-compose)
+  - [1.2. Clone this repo](#12-clone-this-repo)
+    - [1.2.1. Generate a token](#121-generate-a-token)
+  - [1.3. Open the lab directory](#13-open-the-lab-directory)
+  - [1.4. Create a `.env` file](#14-create-a-env-file)
+  - [1.5. (If you use `Docker Desktop`) Start `Docker Engine`](#15-if-you-use-docker-desktop-start-docker-engine)
+  - [1.6. Remove old containers](#16-remove-old-containers)
+  - [1.7. Run containers](#17-run-containers)
+  - [1.8. Connect `pgAdmin` to the database](#18-connect-pgadmin-to-the-database)
+  - [1.9. Go to `postgres`](#19-go-to-postgres)
+  - [1.10. Look at the ERD](#110-look-at-the-erd)
+  - [1.11. Run queries](#111-run-queries)
+- [2. Optional steps](#2-optional-steps)
+  - [2.1. Install `VS Code`](#21-install-vs-code)
+  - [2.2. Connect to the database using `VS Code`](#22-connect-to-the-database-using-vs-code)
+    - [2.2.1. Connect using `ms-ossdata.vscode-pgsql`](#221-connect-using-ms-ossdatavscode-pgsql)
+    - [2.2.2. Connect using `mtxr.sqltools`](#222-connect-using-mtxrsqltools)
 
-## Required steps
+## 1. Required steps
 
 > [!NOTE]
 > Run commands in `terminal` code blocks in a terminal.
 
-### 1. Install `Docker Compose`
+### 1.1. Install `Docker Compose`
 
 1. Install [`Docker Compose`](https://docs.docker.com/compose/install).
 
@@ -35,7 +35,7 @@
 > wsl --install -d Ubuntu-24.04
 > ```
 
-### 2. Clone this repo
+### 1.2. Clone this repo
 
 1. Open a terminal (`bash`, `zsh`, `PowerShell`, etc.).
 2. Clone this repo.
@@ -44,10 +44,10 @@
    git clone https://github.com/deemp/s26-databases
    ```
 
-3. [Generate a token](#21-generate-a-token) if `git` asks for a password.
+3. [Generate a token](#121-generate-a-token) if `git` asks for a password.
 4. Use it as the password.
 
-#### 2.1 Generate a token
+#### 1.2.1. Generate a token
 
 1. Open in a browser <https://github.com/>.
 2. Click your profile icon in the top right corner.
@@ -64,7 +64,7 @@
 13. Scroll to the page bottom.
 14. Click `Generate token`.
 
-### 3. Open the lab directory
+### 1.3. Open the lab directory
 
 1. Check your current directory in the terminal.
 2. If it's not `lab-4`, navigate to this directory:
@@ -75,7 +75,7 @@
    cd s26-databases/lab-4
    ```
 
-### 4. Create a `.env` file
+### 1.4. Create a `.env` file
 
 1. Copy the `.env.example` file to the `.env` file:
 
@@ -93,13 +93,13 @@
 
 2. Edit the `.env` file as necessary.
 
-### 5. (If you use `Docker Desktop`) Start `Docker Engine`
+### 1.5. (If you use `Docker Desktop`) Start `Docker Engine`
 
 1. Launch `Docker Desktop`.
 
    You should see `Engine running` in the lower left corner of the window.
 
-### 6. Remove old containers
+### 1.6. Remove old containers
 
 1. [Open the lab directory](#3-open-the-lab-directory).
 2. Stop containers:
@@ -118,7 +118,7 @@
    docker compose rm
    ```
 
-### 7. Run containers
+### 1.7. Run containers
 
 1. Run `Postgres` and `pgAdmin` containers:
 
@@ -135,7 +135,7 @@
      1. Open a new terminal.
      2. Navigate there to the `s26-databases/lab-4` directory.
 
-### 8. Connect `pgAdmin` to the database
+### 1.8. Connect `pgAdmin` to the database
 
 1. Open `pgAdmin` in a browser: go to <http://localhost:45050>.
 2. Log in:
@@ -152,7 +152,7 @@
    - `Password`: `postgres` (the value of `POSTGRES_PASSWORD` defined in `.env`)
 6. Click `Save`.
 
-### 9. Go to `postgres`
+### 1.9. Go to `postgres`
 
 1. Go to `Default Workspace`.
 
@@ -165,13 +165,13 @@
 5. Unfold (click) `Databases`.
 6. Unfold (click) `postgres`.
 
-### 10. Look at the ERD
+### 1.10. Look at the ERD
 
 1. [Go to `postgres`](#8-go-to-postgres).
 2. Right-click `postgres`.
 3. Click `ERD for Database`.
 
-### 11. Run queries
+### 1.11. Run queries
 
 1. [Go to `postgres`](#8-go-to-postgres).
 2. Right-click `postgres`.
@@ -181,20 +181,20 @@
 
    Click `Execute Script`.
 
-## Optional steps
+## 2. Optional steps
 
-### 1. Install `VS Code`
+### 2.1. Install `VS Code`
 
 See `VS Code` [installation instructions](https://code.visualstudio.com/download).
 
-### 2. Connect to the database using `VS Code`
+### 2.2. Connect to the database using `VS Code`
 
 Connect using any of these methods:
 
 - [Connect using `ms-ossdata.vscode-pgsql`](#connect-using-ms-ossdatavscode-pgsql).
 - [Connect using `mtxr.sqltools`](#connect-using-mtxrsqltools).
 
-#### Connect using `ms-ossdata.vscode-pgsql`
+#### 2.2.1. Connect using `ms-ossdata.vscode-pgsql`
 
 1. Install the [`ms-ossdata.vscode-pgsql`](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-pgsql) extension.
 2. In `VS Code` -> `Activity Bar`, click `PostgreSQL`.
@@ -214,7 +214,7 @@ Connect using any of these methods:
      - `SSL MODE`: `Disable`
 7. Click `Save and connect`.
 
-#### Connect using `mtxr.sqltools`
+#### 2.2.2. Connect using `mtxr.sqltools`
 
 1. Install the [`mtxr.sqltools`](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools) extension.
 2. Open `VS Code`.
