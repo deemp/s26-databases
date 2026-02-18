@@ -92,7 +92,8 @@
 
 ### 5. Remove old containers
 
-1. Stop containers:
+1. [Open the lab directory](#3-open-the-lab-directory).
+2. Stop containers:
 
    Run using the terminal:
 
@@ -100,7 +101,7 @@
    docker compose stop
    ```
 
-2. Remove containers:
+3. Remove containers:
 
    Run using the terminal:
 
