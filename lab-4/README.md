@@ -6,12 +6,13 @@
     - [2.1 Generate a token](#21-generate-a-token)
   - [3. Open the lab directory](#3-open-the-lab-directory)
   - [4. Create a `.env` file](#4-create-a-env-file)
-  - [5. Remove old containers](#5-remove-old-containers)
-  - [6. Run containers](#6-run-containers)
-  - [7. Connect `pgAdmin` to the database](#7-connect-pgadmin-to-the-database)
-  - [8. Go to `postgres`](#8-go-to-postgres)
-  - [9. Look at the ERD](#9-look-at-the-erd)
-  - [10. Run queries](#10-run-queries)
+  - [5. (If you use `Docker Desktop`) Start `Docker Engine`](#5-if-you-use-docker-desktop-start-docker-engine)
+  - [6. Remove old containers](#6-remove-old-containers)
+  - [7. Run containers](#7-run-containers)
+  - [8. Connect `pgAdmin` to the database](#8-connect-pgadmin-to-the-database)
+  - [9. Go to `postgres`](#9-go-to-postgres)
+  - [10. Look at the ERD](#10-look-at-the-erd)
+  - [11. Run queries](#11-run-queries)
 - [Optional steps](#optional-steps)
   - [1. Install `VS Code`](#1-install-vs-code)
   - [2. Connect to the database using `VS Code`](#2-connect-to-the-database-using-vs-code)
@@ -92,7 +93,13 @@
 
 2. Edit the `.env` file as necessary.
 
-### 5. Remove old containers
+### 5. (If you use `Docker Desktop`) Start `Docker Engine`
+
+1. Launch `Docker Desktop`.
+
+   You should see `Engine running` in the lower left corner of the window.
+
+### 6. Remove old containers
 
 1. [Open the lab directory](#3-open-the-lab-directory).
 2. Stop containers:
@@ -111,7 +118,7 @@
    docker compose rm
    ```
 
-### 6. Run containers
+### 7. Run containers
 
 1. Run `Postgres` and `pgAdmin` containers:
 
@@ -128,7 +135,7 @@
      1. Open a new terminal.
      2. Navigate there to the `s26-databases/lab-4` directory.
 
-### 7. Connect `pgAdmin` to the database
+### 8. Connect `pgAdmin` to the database
 
 1. Open `pgAdmin` in a browser: go to <http://localhost:45050>.
 2. Log in:
@@ -145,7 +152,7 @@
    - `Password`: `postgres` (the value of `POSTGRES_PASSWORD` defined in `.env`)
 6. Click `Save`.
 
-### 8. Go to `postgres`
+### 9. Go to `postgres`
 
 1. Go to `Default Workspace`.
 
@@ -158,13 +165,13 @@
 5. Unfold (click) `Databases`.
 6. Unfold (click) `postgres`.
 
-### 9. Look at the ERD
+### 10. Look at the ERD
 
 1. [Go to `postgres`](#8-go-to-postgres).
 2. Right-click `postgres`.
 3. Click `ERD for Database`.
 
-### 10. Run queries
+### 11. Run queries
 
 1. [Go to `postgres`](#8-go-to-postgres).
 2. Right-click `postgres`.
