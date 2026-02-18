@@ -87,6 +87,7 @@
    docker compose up
    ```
 
+2. Wait 2-3 minutes until `pgAdmin` starts.
 ### 7. Connect `pgAdmin` to the database
 
 1. Open `pgAdmin` in a browser: go to <http://localhost:45050>.
