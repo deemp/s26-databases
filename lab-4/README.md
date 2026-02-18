@@ -63,7 +63,10 @@
 
 ### 3. Open the lab directory
 
-1. Run using the terminal:
+1. Check your current directory in the terminal.
+2. If it's not `lab-4`, navigate to this directory:
+
+   Run using the terminal:
 
    ```terminal
    cd s26-databases/lab-4
