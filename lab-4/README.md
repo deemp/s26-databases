@@ -3,6 +3,7 @@
 - [Required steps](#required-steps)
   - [1. Install `Docker Compose`](#1-install-docker-compose)
   - [2. Clone this repo](#2-clone-this-repo)
+    - [2.1 Generate a token](#21-generate-a-token)
   - [3. Open the lab directory](#3-open-the-lab-directory)
   - [4. Create a `.env` file](#4-create-a-env-file)
   - [5. Remove old containers](#5-remove-old-containers)
@@ -39,6 +40,26 @@
    ```terminal
    git clone https://github.com/deemp/s26-databases
    ```
+
+3. [Generate a token](#21-generate-a-token) if `git` asks for a password.
+4. Use it as the password.
+
+#### 2.1 Generate a token
+
+1. Open in a browser <https://github.com/>.
+2. Click your profile icon in the top right corner.
+3. Click `Settings`.
+4. Scroll down until `Developer settings` in the left sidebar.
+5. Click `Developer settings`.
+6. Click `Personal access tokens`.
+7. Click `Tokens (classic)`.
+8. Click `Generate new token`.
+9. Click `Generate new token (classic)`.
+10. Write a note.
+11. Go to `Select scopes`.
+12. Check the mark near `repo`.
+13. Scroll to the page bottom.
+14. Click `Generate token`.
 
 ### 3. Open the lab directory
 
