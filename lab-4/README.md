@@ -120,7 +120,7 @@
 
 ### 1. Install `VS Code`
 
-See `VS Code` [installation instructions](https://code.visualstudio.com/download>).
+See `VS Code` [installation instructions](https://code.visualstudio.com/download).
 
 ### 2. Connect to the database using `VS Code`
 
