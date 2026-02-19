@@ -11,7 +11,7 @@
   - [1.7. Run containers](#17-run-containers)
   - [1.8. Connect `pgAdmin` to the database](#18-connect-pgadmin-to-the-database)
   - [1.9. Go to `postgres`](#19-go-to-postgres)
-  - [1.10. Look at the ERD](#110-look-at-the-erd)
+  - [1.10. Get ERD in Chen notation](#110-get-erd-in-chen-notation)
   - [1.11. Run queries](#111-run-queries)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Install `VS Code`](#21-install-vs-code)
@@ -168,11 +168,15 @@
 5. Unfold (click) `Databases`.
 6. Unfold (click) `postgres`.
 
-### 1.10. Look at the ERD
+### 1.10. Get ERD in Chen notation
 
 1. [Go to `postgres`](#19-go-to-postgres).
 2. Right-click `postgres`.
 3. Click `ERD for Database`.
+4. Click `Cardinality Notation`.
+
+   <img alt="Click Cardinality Notation" src="./images/click-cardinality-notation.png" style="width:400px"></img>
+5. Click `Chen Notation`.
 
 ### 1.11. Run queries
 
