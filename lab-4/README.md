@@ -164,7 +164,7 @@
 3. Go to `Servers`.
 4. Unfold (click) `postgres`.
 
-   <img alt="Click postgres" src="./images/click-postgres.png" style="width:400px"></img>
+   <img alt="Click postgres" src="./images/postgres-server.png" style="width:400px"></img>
 5. Unfold (click) `Databases`.
 6. Unfold (click) `postgres`.
 
