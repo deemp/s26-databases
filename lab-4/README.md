@@ -94,7 +94,7 @@
    copy .env.example .env
    ```
 
-2. Edit the `.env` file as necessary.
+2. (Optional) Edit the `.env` file as necessary.
 
 ### 1.5. (If you use `Docker Desktop`) Start `Docker Engine`
 
