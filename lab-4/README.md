@@ -168,6 +168,8 @@
 5. Unfold (click) `Databases`.
 6. Unfold (click) `postgres`.
 
+   <img alt="postgres Database" src="./images/postgres-database.png" style="width:400px"></img>
+
 ### 1.10. Get ERD in Chen notation
 
 1. [Go to `postgres`](#19-go-to-postgres).
