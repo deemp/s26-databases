@@ -179,6 +179,8 @@
 
    <img alt="Click Cardinality Notation" src="./images/click-cardinality-notation.png" style="width:400px"></img>
 5. Click `Chen Notation`.
+6. Click `Image`.
+   <img alt="Click Download Image" src="./images/click-download-image.png" style="width:400px"></img>
 
 ### 1.11. Run queries
 
