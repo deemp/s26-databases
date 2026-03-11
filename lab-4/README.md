@@ -204,9 +204,17 @@ To execute a file at the path `~/Downloads/demo-medium-en/demo-medium-en-2017081
 
 Run in the terminal:
 
-```terminal
-docker exec -i postgres-lab psql -U postgres -d postgres -p 5432 < ~/Downloads/demo-medium-en/demo-medium-en-20170815.sql
-```
+- On `Linux` & `macOS`:
+
+  ```terminal
+  docker exec -i postgres-lab psql -U postgres -d postgres -p 5432 < ~/Downloads/demo-medium-en/demo-medium-en-20170815.sql
+  ```
+
+- On `Windows`:
+  
+  ```terminal
+  Get-Content -Path "~/Downloads/demo-medium-en/demo-medium-en-20170815.sql" -Raw | docker exec -i postgres-lab psql -U postgres -d postgres -p 5432
+  ```
 
 ### 1.13. Open the new database
 
