@@ -216,6 +216,9 @@ docker exec -i postgres-lab psql -U postgres -d postgres -p 5432 < ~/Downloads/d
 4. Unfold (click) `Databases`.
 
    You should see the `demo` database created by the script.
+5. Unfold (click) `demo`.
+6. Unfold (click) `Schemas`.
+7. Unfold (click) `bookings`.
 
 ## 2. Optional steps
 
