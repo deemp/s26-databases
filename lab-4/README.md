@@ -200,9 +200,12 @@
 
 ### 1.12. Execute an SQL file
 
+> [!NOTE]
+> Remove `docker exec -i postgres-lab` if you don't use `Docker`.
+
 To execute a file at the path `~/Downloads/demo-medium-en/demo-medium-en-20170815.sql`,
 
-Run in the terminal:
+run in the terminal:
 
 - On `Linux` & `macOS`:
 
