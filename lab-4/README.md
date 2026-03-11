@@ -38,7 +38,9 @@
 ### 1.2. Clone this repo
 
 1. Open a terminal (`bash`, `zsh`, `PowerShell`, etc.).
-2. Clone this repo.
+2. To clone this repo,
+
+   run in the terminal:
 
    ```terminal
    git clone https://github.com/deemp/s26-databases
@@ -70,9 +72,9 @@
 ### 1.3. Open the lab directory
 
 1. Check your current directory in the terminal.
-2. If it's not `lab-4`, navigate to this directory:
+2. If it's not `lab-4`, to navigate to this directory,
 
-   Run using the terminal:
+   run in the terminal:
 
    ```terminal
    cd s26-databases/lab-4
@@ -80,9 +82,9 @@
 
 ### 1.4. Create a `.env` file
 
-1. Copy the `.env.example` file to the `.env` file:
+1. To copy the `.env.example` file to the `.env` file:
 
-   Run using the terminal:
+   run in the terminal:
 
    ```terminal
    cp .env.example .env
@@ -105,17 +107,17 @@
 ### 1.6. Remove old containers
 
 1. [Open the lab directory](#13-open-the-lab-directory).
-2. Stop containers:
+2. To stop containers,
 
-   Run using the terminal:
+   run in the terminal:
 
    ```terminal
    docker compose stop
    ```
 
-3. Remove containers:
+3. To remove containers,
 
-   Run using the terminal:
+   run in the terminal:
 
    ```terminal
    docker compose rm
@@ -123,9 +125,9 @@
 
 ### 1.7. Run containers
 
-1. Run `Postgres` and `pgAdmin` containers:
+1. To start `Postgres` and `pgAdmin` containers,
 
-   Run using the terminal:
+   run in the terminal:
   
    ```terminal
    docker compose up
