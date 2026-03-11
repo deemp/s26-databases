@@ -13,6 +13,8 @@
   - [1.9. Go to `postgres`](#19-go-to-postgres)
   - [1.10. Get ERD in Chen notation](#110-get-erd-in-chen-notation)
   - [1.11. Run queries](#111-run-queries)
+  - [1.12. Execute an SQL file](#112-execute-an-sql-file)
+  - [1.13. Open the new database](#113-open-the-new-database)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Install `VS Code`](#21-install-vs-code)
   - [2.2. Connect to the database using `VS Code`](#22-connect-to-the-database-using-vs-code)
@@ -195,6 +197,25 @@
    Click `Execute script`.
 
    <img alt="Click postgres" src="./images/execute-script.png" style="width:400px"></img>
+
+### 1.12. Execute an SQL file
+
+To execute a file at the path `~/Downloads/demo-medium-en/demo-medium-en-20170815.sql`,
+
+Run in the terminal:
+
+```terminal
+docker exec -i postgres-lab psql -U postgres -d postgres -p 5432 < ~/Downloads/demo-medium-en/demo-medium-en-20170815.sql
+```
+
+### 1.13. Open the new database
+
+1. Open `pgAdmin`.
+2. Unfold (click) `Servers`.
+3. Unfold (click) `postgres`.
+4. Unfold (click) `Databases`.
+
+   You should see the `demo` database created by the script.
 
 ## 2. Optional steps
 
