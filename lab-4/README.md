@@ -9,7 +9,8 @@
     - [1.1.4. Create a `.env` file](#114-create-a-env-file)
     - [1.1.5. Start `Docker Desktop`](#115-start-docker-desktop)
     - [1.1.6. Remove old containers](#116-remove-old-containers)
-    - [1.1.7. Start all containers](#117-start-all-containers)
+    - [1.1.7. Start all services](#117-start-all-services)
+      - [1.1.7.1. Restart a service](#1171-restart-a-service)
   - [1.2. Run the script](#12-run-the-script)
     - [Script for `Lab 8 - Task 4`](#script-for-lab-8---task-4)
 - [2. Optional steps](#2-optional-steps)
@@ -131,31 +132,36 @@
 #### 1.1.6. Remove old containers
 
 1. [Open the lab directory](#113-open-the-lab-directory).
-2. To stop containers,
+
+2. To remove containers, volumes, images,
 
    run in the terminal:
 
    ```terminal
-   docker compose stop
+   docker compose down -v --rmi all
    ```
 
-3. To remove containers,
-
-   run in the terminal:
-
-   ```terminal
-   docker compose rm
-   ```
-
-#### 1.1.7. Start all containers
+#### 1.1.7. Start all services
 
 1. To start containers,
 
    run in the terminal:
   
    ```terminal
-   docker compose up -d
+   docker compose up --build -d
    ```
+
+##### 1.1.7.1. Restart a service
+
+1. To restart a service,
+
+   run in the terminal:
+  
+   ```terminal
+   docker compose up <service-name> --build -d
+   ```
+
+   See service names in [`docker-compose.yaml`](./docker-compose.yaml).
 
 ### 1.2. Run the script
 
