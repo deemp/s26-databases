@@ -24,6 +24,8 @@ services:
   scripts:
     build: .
     container_name: python-db-scripts
+    volumes:
+      - ./scripts:/app/scripts
     environment:
       - POSTGRES_HOST=postgres
       - POSTGRES_PORT=${POSTGRES_PORT:-5432}
