@@ -10,6 +10,7 @@
     - [1.1.5. Start `Docker Desktop`](#115-start-docker-desktop)
     - [1.1.6. Remove old containers](#116-remove-old-containers)
     - [1.1.7. Start all containers](#117-start-all-containers)
+  - [1.2. Run the script](#12-run-the-script)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Set up `pgAdmin`](#21-set-up-pgadmin)
     - [2.1.1. Connect `pgAdmin` to the database](#211-connect-pgadmin-to-the-database)
@@ -153,6 +154,16 @@
   
    ```terminal
    docker compose up -d
+   ```
+
+### 1.2. Run the script
+
+1. To run the script that reads from the database,
+
+   run in the terminal:
+
+   ```terminal
+   docker compose exec 
    ```
 
 ## 2. Optional steps
