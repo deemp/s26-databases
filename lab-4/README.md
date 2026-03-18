@@ -7,7 +7,7 @@
       - [1.2.1. Generate a token](#121-generate-a-token)
     - [1.3. Open the lab directory](#13-open-the-lab-directory)
     - [1.4. Create a `.env` file](#14-create-a-env-file)
-    - [1.5. (If you use `Docker Desktop`) Start `Docker Engine`](#15-if-you-use-docker-desktop-start-docker-engine)
+    - [1.5. Start `Docker Desktop`](#15-start-docker-desktop)
     - [1.6. Remove old containers](#16-remove-old-containers)
     - [1.7. Start all containers](#17-start-all-containers)
 - [2. Optional steps](#2-optional-steps)
@@ -120,9 +120,9 @@
 
 2. (Optional) Edit the `.env` file as necessary.
 
-#### 1.5. (If you use `Docker Desktop`) Start `Docker Engine`
+#### 1.5. Start `Docker Desktop`
 
-1. Launch `Docker Desktop`.
+1. If you use `Docker Desktop`, start it.
 
    You should see `Engine running` in the lower left corner of the window.
 
