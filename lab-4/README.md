@@ -8,18 +8,20 @@
   - [1.4. Create a `.env` file](#14-create-a-env-file)
   - [1.5. (If you use `Docker Desktop`) Start `Docker Engine`](#15-if-you-use-docker-desktop-start-docker-engine)
   - [1.6. Remove old containers](#16-remove-old-containers)
-  - [1.7. Run containers](#17-run-containers)
-  - [1.8. Connect `pgAdmin` to the database](#18-connect-pgadmin-to-the-database)
-  - [1.9. Go to `postgres`](#19-go-to-postgres)
-  - [1.10. Get ERD in Chen notation](#110-get-erd-in-chen-notation)
-  - [1.11. Run queries](#111-run-queries)
-  - [1.12. Execute an SQL file](#112-execute-an-sql-file)
-  - [1.13. Open the new database](#113-open-the-new-database)
+  - [1.7. Start all containers](#17-start-all-containers)
 - [2. Optional steps](#2-optional-steps)
-  - [2.1. Install `VS Code`](#21-install-vs-code)
+  - [2.1. Set up `pgAdmin`](#21-set-up-pgadmin)
+    - [2.1.1. Connect `pgAdmin` to the database](#211-connect-pgadmin-to-the-database)
+    - [2.1.2. Go to `postgres`](#212-go-to-postgres)
+    - [2.1.3. Get ERD in Chen notation](#213-get-erd-in-chen-notation)
+    - [2.1.4. Run queries](#214-run-queries)
+    - [2.1.5. Execute an SQL file](#215-execute-an-sql-file)
+    - [2.1.6. Open the new database](#216-open-the-new-database)
   - [2.2. Connect to the database using `VS Code`](#22-connect-to-the-database-using-vs-code)
-    - [2.2.1. Connect using `ms-ossdata.vscode-pgsql`](#221-connect-using-ms-ossdatavscode-pgsql)
-    - [2.2.2. Connect using `mtxr.sqltools`](#222-connect-using-mtxrsqltools)
+    - [2.2.1. Install `VS Code`](#221-install-vs-code)
+    - [2.2.2. Connect to the database using `VS Code`](#222-connect-to-the-database-using-vs-code)
+      - [2.2.2.1. Connect using `ms-ossdata.vscode-pgsql`](#2221-connect-using-ms-ossdatavscode-pgsql)
+      - [2.2.2.2. Connect using `mtxr.sqltools`](#2222-connect-using-mtxrsqltools)
 
 ## 1. Required steps
 
@@ -125,41 +127,39 @@
    docker compose rm
    ```
 
-### 1.7. Run containers
+### 1.7. Start all containers
 
-1. To start `Postgres` and `pgAdmin` containers,
+1. To start containers,
 
    run in the terminal:
   
    ```terminal
-   docker compose up
+   docker compose up -d
    ```
 
-2. Wait 2-3 minutes until `pgAdmin` starts.
-3. If you need to run other commands use any of these options:
-   - Option 1: press `d` in the terminal where you run the containers.
-   - Option 2:
-     1. Open a new terminal.
-     2. Navigate there to the `s26-databases/lab-4` directory.
+## 2. Optional steps
 
-### 1.8. Connect `pgAdmin` to the database
+### 2.1. Set up `pgAdmin`
 
-1. Open `pgAdmin` in a browser: go to <http://localhost:45050>.
-2. Log in:
+#### 2.1.1. Connect `pgAdmin` to the database
+
+1. Wait 2-3 minutes until `pgAdmin` starts.
+2. Open `pgAdmin` in a browser: go to <http://localhost:45050>.
+3. Log in:
    1. Login: the value of `PGADMIN_DEFAULT_EMAIL` defined in `.env`
    2. Password: the value of `PGADMIN_DEFAULT_PASSWORD` defined in `.env`.
-3. Click `Add New Server`.
-4. In `General`, set:
+4. Click `Add New Server`.
+5. In `General`, set:
    - `Name`: `postgres`
-5. In `Connection`, set:
+6. In `Connection`, set:
    - `Host name/address`: `postgres` (service name created by `Docker`)
    - `Port`: `5432` (the value of `POSTGRES_PORT` defined in `.env`)
    - `Maintenance database`: `postgres` (the value of `POSTGRES_DB` defined in `.env`)
    - `Username`: `postgres` (the value of `POSTGRES_USER` defined in `.env`)
    - `Password`: `postgres` (the value of `POSTGRES_PASSWORD` defined in `.env`)
-6. Click `Save`.
+7. Click `Save`.
 
-### 1.9. Go to `postgres`
+#### 2.1.2. Go to `postgres`
 
 1. Go to `Default Workspace`.
 
@@ -174,7 +174,7 @@
 
    <img alt="postgres Database" src="./images/postgres-database.png" style="width:400px"></img>
 
-### 1.10. Get ERD in Chen notation
+#### 2.1.3. Get ERD in Chen notation
 
 1. [Go to `postgres`](#19-go-to-postgres).
 2. Right-click `postgres`.
@@ -186,7 +186,7 @@
 6. Click `Image`.
    <img alt="Click Download Image" src="./images/click-download-image.png" style="width:400px"></img>
 
-### 1.11. Run queries
+#### 2.1.4. Run queries
 
 1. [Go to `postgres`](#19-go-to-postgres).
 2. Right-click `postgres`.
@@ -198,7 +198,7 @@
 
    <img alt="Click postgres" src="./images/execute-script.png" style="width:400px"></img>
 
-### 1.12. Execute an SQL file
+#### 2.1.5. Execute an SQL file
 
 > [!NOTE]
 > Remove `docker exec -i postgres-lab` if you don't use `Docker`.
@@ -219,7 +219,7 @@ run in the terminal:
   Get-Content -Path "~/Downloads/demo-medium-en/demo-medium-en-20170815.sql" -Raw | docker exec -i postgres-lab psql -U postgres -d postgres -p 5432
   ```
 
-### 1.13. Open the new database
+#### 2.1.6. Open the new database
 
 1. Open `pgAdmin`.
 2. Unfold (click) `Servers`.
@@ -231,20 +231,20 @@ run in the terminal:
 6. Unfold (click) `Schemas`.
 7. Unfold (click) `bookings`.
 
-## 2. Optional steps
+### 2.2. Connect to the database using `VS Code`
 
-### 2.1. Install `VS Code`
+#### 2.2.1. Install `VS Code`
 
 See `VS Code` [installation instructions](https://code.visualstudio.com/download).
 
-### 2.2. Connect to the database using `VS Code`
+#### 2.2.2. Connect to the database using `VS Code`
 
 Connect using any of these methods:
 
 - [Connect using `ms-ossdata.vscode-pgsql`](#221-connect-using-ms-ossdatavscode-pgsql).
 - [Connect using `mtxr.sqltools`](#222-connect-using-mtxrsqltools).
 
-#### 2.2.1. Connect using `ms-ossdata.vscode-pgsql`
+##### 2.2.2.1. Connect using `ms-ossdata.vscode-pgsql`
 
 1. Install the [`ms-ossdata.vscode-pgsql`](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-pgsql) extension.
 2. In `VS Code` -> `Activity Bar`, click `PostgreSQL`.
@@ -264,7 +264,7 @@ Connect using any of these methods:
      - `SSL MODE`: `Disable`
 7. Click `Save and connect`.
 
-#### 2.2.2. Connect using `mtxr.sqltools`
+##### 2.2.2.2. Connect using `mtxr.sqltools`
 
 1. Install the [`mtxr.sqltools`](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools) extension.
 2. Open `VS Code`.
