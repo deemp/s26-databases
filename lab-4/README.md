@@ -3,7 +3,7 @@
 - [1. Required steps](#1-required-steps)
   - [Set up `Docker` containers](#set-up-docker-containers)
     - [1.1. Install `Docker Compose`](#11-install-docker-compose)
-    - [1.2. Clone this repo](#12-clone-this-repo)
+    - [1.2. Get this repo](#12-get-this-repo)
       - [1.2.1. Generate a token](#121-generate-a-token)
     - [1.3. Open the lab directory](#13-open-the-lab-directory)
     - [1.4. Create a `.env` file](#14-create-a-env-file)
@@ -42,10 +42,10 @@
 > wsl --install -d Ubuntu-24.04
 > ```
 
-#### 1.2. Clone this repo
+#### 1.2. Get this repo
 
-1. Open a terminal (`bash`, `zsh`, `PowerShell`, etc.).
-2. To clone this repo,
+1. Open a terminal (preferable `bash` or `zsh`).
+2. If you don't have this repo, to clone this repo,
 
    run in the terminal:
 
@@ -53,8 +53,24 @@
    git clone https://github.com/deemp/s26-databases
    ```
 
-3. [Generate a token](#121-generate-a-token) if `git` asks for a password.
-4. Use it as the password.
+   If `git` asks for a password:
+
+   1. [Generate a token](#121-generate-a-token).
+   2. Use it as the password.
+
+3. To enter this repo,
+
+   run in the terminal:
+
+   ```terminal
+   cd s26-databases
+   ```
+
+4. Pull the latest changes:
+
+   ```terminal
+   git pull
+   ```
 
 ##### 1.2.1. Generate a token
 
@@ -78,13 +94,12 @@
 
 #### 1.3. Open the lab directory
 
-1. Check your current directory in the terminal.
-2. If it's not `lab-4`, to navigate to this directory,
+1. To navigate to the `lab-4` directory,
 
    run in the terminal:
 
    ```terminal
-   cd s26-databases/lab-4
+   cd lab-4
    ```
 
 #### 1.4. Create a `.env` file
