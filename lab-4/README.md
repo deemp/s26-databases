@@ -11,6 +11,7 @@
     - [1.1.6. Remove old containers](#116-remove-old-containers)
     - [1.1.7. Start all containers](#117-start-all-containers)
   - [1.2. Run the script](#12-run-the-script)
+    - [Script for `Lab 8 - Task 4`](#script-for-lab-8---task-4)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Set up `pgAdmin`](#21-set-up-pgadmin)
     - [2.1.1. Connect `pgAdmin` to the database](#211-connect-pgadmin-to-the-database)
@@ -158,12 +159,14 @@
 
 ### 1.2. Run the script
 
-1. To run the script that reads from the database,
+#### Script for `Lab 8 - Task 4`
+
+1. To run the script,
 
    run in the terminal:
 
    ```terminal
-   docker compose exec 
+   docker compose run --rm scripts python scripts/lab-8-task-4.py
    ```
 
 ## 2. Optional steps
