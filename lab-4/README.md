@@ -11,6 +11,9 @@
     - [1.1.6. Remove old containers](#116-remove-old-containers)
     - [1.1.7. Start all services](#117-start-all-services)
       - [1.1.7.1. Restart a service](#1171-restart-a-service)
+  - [1.2. Load the data via the SQL script](#12-load-the-data-via-the-sql-script)
+    - [1.2.1. Download the data](#121-download-the-data)
+    - [1.2.2. Run the SQL script](#122-run-the-sql-script)
   - [1.2. Run the script](#12-run-the-script)
     - [Script for `Lab 8 - Task 4`](#script-for-lab-8---task-4)
 - [2. Optional steps](#2-optional-steps)
@@ -19,7 +22,6 @@
     - [2.1.2. Go to `postgres`](#212-go-to-postgres)
     - [2.1.3. Get ERD in Chen notation](#213-get-erd-in-chen-notation)
     - [2.1.4. Run queries](#214-run-queries)
-    - [2.1.5. Execute an SQL file](#215-execute-an-sql-file)
     - [2.1.6. Open the new database](#216-open-the-new-database)
   - [2.2. Connect to the database using `VS Code`](#22-connect-to-the-database-using-vs-code)
     - [2.2.1. Install `VS Code`](#221-install-vs-code)
@@ -163,6 +165,34 @@
 
    See service names in [`docker-compose.yaml`](./docker-compose.yaml).
 
+### 1.2. Load the data via the SQL script
+
+#### 1.2.1. Download the data
+
+1. Download the archive: <https://edu.postgrespro.com/demo-medium-en.zip>
+2. Unpack it to get `demo-medium-en-20170815.sql`.
+
+#### 1.2.2. Run the SQL script
+
+> [!NOTE]
+> Remove `docker exec -i postgres-lab` if you don't use `Docker`.
+
+To execute the SQL script at the path `~/Downloads/demo-medium-en/demo-medium-en-20170815.sql`,
+
+run in the terminal:
+
+- On `Linux` & `macOS`:
+
+  ```terminal
+  docker exec -i postgres-lab psql -U postgres -d postgres -p 5432 < ~/Downloads/demo-medium-en/demo-medium-en-20170815.sql
+  ```
+
+- On `Windows`:
+  
+  ```terminal
+  Get-Content -Path "~/Downloads/demo-medium-en/demo-medium-en-20170815.sql" -Raw | docker exec -i postgres-lab psql -U postgres -d postgres -p 5432
+  ```
+
 ### 1.2. Run the script
 
 #### Script for `Lab 8 - Task 4`
@@ -235,27 +265,6 @@
    Click `Execute script`.
 
    <img alt="Click postgres" src="./images/execute-script.png" style="width:400px"></img>
-
-#### 2.1.5. Execute an SQL file
-
-> [!NOTE]
-> Remove `docker exec -i postgres-lab` if you don't use `Docker`.
-
-To execute a file at the path `~/Downloads/demo-medium-en/demo-medium-en-20170815.sql`,
-
-run in the terminal:
-
-- On `Linux` & `macOS`:
-
-  ```terminal
-  docker exec -i postgres-lab psql -U postgres -d postgres -p 5432 < ~/Downloads/demo-medium-en/demo-medium-en-20170815.sql
-  ```
-
-- On `Windows`:
-  
-  ```terminal
-  Get-Content -Path "~/Downloads/demo-medium-en/demo-medium-en-20170815.sql" -Raw | docker exec -i postgres-lab psql -U postgres -d postgres -p 5432
-  ```
 
 #### 2.1.6. Open the new database
 
