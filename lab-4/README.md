@@ -1,4 +1,4 @@
-# Try Postgres
+# Lab setup
 
 - [1. Required steps](#1-required-steps)
   - [1.1. Set up `Docker` containers](#11-set-up-docker-containers)
