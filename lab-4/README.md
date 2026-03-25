@@ -11,23 +11,23 @@
     - [1.1.6. Remove old containers](#116-remove-old-containers)
     - [1.1.7. Start all services](#117-start-all-services)
       - [1.1.7.1. Restart a service](#1171-restart-a-service)
-  - [1.2. Load the data via the SQL script](#12-load-the-data-via-the-sql-script)
-    - [1.2.1. Download the data](#121-download-the-data)
-    - [1.2.2. Run the SQL script](#122-run-the-sql-script)
-  - [1.2. Run the script](#12-run-the-script)
-    - [Script for `Lab 8 - Task 4`](#script-for-lab-8---task-4)
 - [2. Optional steps](#2-optional-steps)
-  - [2.1. Set up `pgAdmin`](#21-set-up-pgadmin)
-    - [2.1.1. Connect `pgAdmin` to the database](#211-connect-pgadmin-to-the-database)
-    - [2.1.2. Go to `postgres`](#212-go-to-postgres)
-    - [2.1.3. Get ERD in Chen notation](#213-get-erd-in-chen-notation)
-    - [2.1.4. Run queries](#214-run-queries)
-    - [2.1.6. Open the new database](#216-open-the-new-database)
-  - [2.2. Connect to the database using `VS Code`](#22-connect-to-the-database-using-vs-code)
-    - [2.2.1. Install `VS Code`](#221-install-vs-code)
-    - [2.2.2. Connect to the database using `VS Code`](#222-connect-to-the-database-using-vs-code)
-      - [2.2.2.1. Connect using `ms-ossdata.vscode-pgsql`](#2221-connect-using-ms-ossdatavscode-pgsql)
-      - [2.2.2.2. Connect using `mtxr.sqltools`](#2222-connect-using-mtxrsqltools)
+  - [2.1. Load the data via the SQL script](#21-load-the-data-via-the-sql-script)
+    - [2.1.1. Download the data](#211-download-the-data)
+    - [2.1.2. Run the SQL script](#212-run-the-sql-script)
+  - [2.2. Run the script](#22-run-the-script)
+    - [2.2.1. Script for `Lab 8 - Task 4`](#221-script-for-lab-8---task-4)
+  - [2.3. Set up `pgAdmin`](#23-set-up-pgadmin)
+    - [2.3.1. Connect `pgAdmin` to the database](#231-connect-pgadmin-to-the-database)
+    - [2.3.2. Go to `postgres`](#232-go-to-postgres)
+    - [2.3.3. Get ERD in Chen notation](#233-get-erd-in-chen-notation)
+    - [2.3.4. Run queries](#234-run-queries)
+    - [2.3.5. Open the new database](#235-open-the-new-database)
+  - [2.4. Connect to the database using `VS Code`](#24-connect-to-the-database-using-vs-code)
+    - [2.4.1. Install `VS Code`](#241-install-vs-code)
+    - [2.4.2. Connect to the database using `VS Code`](#242-connect-to-the-database-using-vs-code)
+      - [2.4.2.1. Connect using `ms-ossdata.vscode-pgsql`](#2421-connect-using-ms-ossdatavscode-pgsql)
+      - [2.4.2.2. Connect using `mtxr.sqltools`](#2422-connect-using-mtxrsqltools)
 
 ## 1. Required steps
 
@@ -165,14 +165,16 @@
 
    See service names in [`docker-compose.yaml`](./docker-compose.yaml).
 
-### 1.2. Load the data via the SQL script
+## 2. Optional steps
 
-#### 1.2.1. Download the data
+### 2.1. Load the data via the SQL script
+
+#### 2.1.1. Download the data
 
 1. Download the archive: <https://edu.postgrespro.com/demo-medium-en.zip>
 2. Unpack it to get `demo-medium-en-20170815.sql`.
 
-#### 1.2.2. Run the SQL script
+#### 2.1.2. Run the SQL script
 
 > [!NOTE]
 > Remove `docker exec -i postgres-lab` if you don't use `Docker`.
@@ -193,9 +195,9 @@ run in the terminal:
   Get-Content -Path "~/Downloads/demo-medium-en/demo-medium-en-20170815.sql" -Raw | docker exec -i postgres-lab psql -U postgres -d postgres -p 5432
   ```
 
-### 1.2. Run the script
+### 2.2. Run the script
 
-#### Script for `Lab 8 - Task 4`
+#### 2.2.1. Script for `Lab 8 - Task 4`
 
 1. To run the script,
 
@@ -205,11 +207,9 @@ run in the terminal:
    docker compose run --rm scripts python scripts/lab-8-task-4.py
    ```
 
-## 2. Optional steps
+### 2.3. Set up `pgAdmin`
 
-### 2.1. Set up `pgAdmin`
-
-#### 2.1.1. Connect `pgAdmin` to the database
+#### 2.3.1. Connect `pgAdmin` to the database
 
 1. Wait 2-3 minutes until `pgAdmin` starts.
 2. Open `pgAdmin` in a browser: go to <http://localhost:45050>.
@@ -227,7 +227,7 @@ run in the terminal:
    - `Password`: `postgres` (the value of `POSTGRES_PASSWORD` defined in `.env`)
 7. Click `Save`.
 
-#### 2.1.2. Go to `postgres`
+#### 2.3.2. Go to `postgres`
 
 1. Go to `Default Workspace`.
 
@@ -242,7 +242,7 @@ run in the terminal:
 
    <img alt="postgres Database" src="./images/postgres-database.png" style="width:400px"></img>
 
-#### 2.1.3. Get ERD in Chen notation
+#### 2.3.3. Get ERD in Chen notation
 
 1. [Go to `postgres`](#212-go-to-postgres).
 2. Right-click `postgres`.
@@ -254,7 +254,7 @@ run in the terminal:
 6. Click `Image`.
    <img alt="Click Download Image" src="./images/click-download-image.png" style="width:400px"></img>
 
-#### 2.1.4. Run queries
+#### 2.3.4. Run queries
 
 1. [Go to `postgres`](#212-go-to-postgres).
 2. Right-click `postgres`.
@@ -266,7 +266,7 @@ run in the terminal:
 
    <img alt="Click postgres" src="./images/execute-script.png" style="width:400px"></img>
 
-#### 2.1.6. Open the new database
+#### 2.3.5. Open the new database
 
 1. Open `pgAdmin`.
 2. Unfold (click) `Servers`.
@@ -278,20 +278,20 @@ run in the terminal:
 6. Unfold (click) `Schemas`.
 7. Unfold (click) `bookings`.
 
-### 2.2. Connect to the database using `VS Code`
+### 2.4. Connect to the database using `VS Code`
 
-#### 2.2.1. Install `VS Code`
+#### 2.4.1. Install `VS Code`
 
 See `VS Code` [installation instructions](https://code.visualstudio.com/download).
 
-#### 2.2.2. Connect to the database using `VS Code`
+#### 2.4.2. Connect to the database using `VS Code`
 
 Connect using any of these methods:
 
 - [Connect using `ms-ossdata.vscode-pgsql`](#2221-connect-using-ms-ossdatavscode-pgsql).
 - [Connect using `mtxr.sqltools`](#2222-connect-using-mtxrsqltools).
 
-##### 2.2.2.1. Connect using `ms-ossdata.vscode-pgsql`
+##### 2.4.2.1. Connect using `ms-ossdata.vscode-pgsql`
 
 1. Install the [`ms-ossdata.vscode-pgsql`](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-pgsql) extension.
 2. In `VS Code` -> `Activity Bar`, click `PostgreSQL`.
@@ -311,7 +311,7 @@ Connect using any of these methods:
      - `SSL MODE`: `Disable`
 7. Click `Save and connect`.
 
-##### 2.2.2.2. Connect using `mtxr.sqltools`
+##### 2.4.2.2. Connect using `mtxr.sqltools`
 
 1. Install the [`mtxr.sqltools`](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools) extension.
 2. Open `VS Code`.
