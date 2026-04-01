@@ -5,6 +5,7 @@ from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pymongo import MongoClient
 from bson import ObjectId  # noqa: F401
+from bson.json_util import loads as bson_loads
 
 DATA_DIR = Path(__file__).parent / "data"
 
@@ -16,9 +17,12 @@ class Settings(BaseSettings):
     password: str = Field(..., alias="MONGO_PASSWORD")
     host_port: int = Field(..., alias="MONGO_HOST_PORT")
     db: str = Field(..., alias="MONGO_DB")
+    collection: str = Field(..., alias="MONGO_COLLECTION")
 
 
 settings = Settings()  # type: ignore[reportCallIssue]
+
+SUPPLIES_PATH = DATA_DIR / "setup" / "supplies.jsonl"
 
 
 def get_db():
@@ -58,8 +62,17 @@ def update_operation(db):
     raise NotImplementedError
 
 
+def import_data(db):
+    if db[settings.collection].count_documents({}, limit=1):
+        return
+    with open(SUPPLIES_PATH) as f:
+        docs = [bson_loads(line) for line in f]
+    db[settings.collection].insert_many(docs)
+
+
 if __name__ == "__main__":
     db = get_db()
+    import_data(db)
     insert_operation(db)
     find_operation(db)
     delete_operation(db)

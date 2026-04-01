@@ -5,7 +5,6 @@
 <!-- no toc -->
 1. [Set up the environment](#set-up-the-environment).
 1. [Run services](#run-services).
-1. [Import data](#import-data).
 1. [Run the `Python` script](#run-the-python-script).
 
 ### Set up the environment
@@ -32,22 +31,6 @@
 
    ```sh
    docker compose --env-file .env.secret ps --format "table {{.Name}}\t{{.Ports}}\t{{.Status}}"
-   ```
-
-### Import data
-
-1. Copy the dataset into the container:
-
-   ```sh
-   docker cp data/setup/supplies.jsonl mongodb-lab:/tmp/supplies.jsonl
-   ```
-
-2. Import it into the database:
-
-   ```sh
-   docker exec -it mongodb-lab mongoimport \
-     -u $MONGO_USER -p $MONGO_PASSWORD --authenticationDatabase admin \
-     --db $MONGO_DB --collection $MONGO_COLLECTION --file /tmp/supplies.jsonl
    ```
 
 ### Run the `Python` script
