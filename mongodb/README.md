@@ -72,7 +72,8 @@
 
 <!-- no toc -->
 - [Run a command inside the `MongoDB` container](#run-a-command-inside-the-mongodb-container).
-- [Explore the `lab` database](#explore-the-lab-database).
+- [Explore the `lab` database via Mongo Express](#explore-the-lab-database-via-mongo-express).
+- [Explore the `lab` database via MongoDB Compass](#explore-the-lab-database-via-mongodb-compass).
 
 ### Run a command inside the `MongoDB` container
 
@@ -86,7 +87,7 @@
    - `mongosh` — the MongoDB shell client
    - `-u $MONGO_USER -p $MONGO_PASSWORD` — authenticates with the credentials from `.env.secret`
 
-### Explore the `lab` database
+### Explore the `lab` database via Mongo Express
 
 1. Open Mongo Express at <http://localhost:8081> (login with `MONGOEXPRESS_USER` / `MONGOEXPRESS_PASSWORD` from `.env.secret`).
 
@@ -105,3 +106,15 @@
    ```
 
 6. Click `Find`.
+
+### Explore the `lab` database via MongoDB Compass
+
+1. Install [MongoDB Compass](https://www.mongodb.com/products/tools/compass).
+
+2. Connect using the connection string:
+
+   ```text
+   mongodb://$MONGO_USER:$MONGO_PASSWORD@localhost:$MONGO_HOST_PORT/
+   ```
+
+3. Select the `lab` database and `sales` collection.
