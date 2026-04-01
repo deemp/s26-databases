@@ -1,8 +1,6 @@
 # Lab 10: NoSQL Databases (MongoDB)
 
-## Setup
-
-### Required steps
+## Required steps
 
 <!-- no toc -->
 1. [Set up the environment](#set-up-the-environment).
@@ -10,7 +8,7 @@
 1. [Import data](#import-data).
 1. [Run the script](#run-the-script).
 
-#### Set up the environment
+### Set up the environment
 
 1. Copy the environment file and adjust if needed:
 
@@ -22,7 +20,7 @@
 
    **Tip:** The default values will work too.
 
-#### Run services
+### Run services
 
 1. Start the services:
 
@@ -36,7 +34,7 @@
    docker compose --env-file .env.secret ps --format "table {{.Name}}\t{{.Ports}}\t{{.Status}}"
    ```
 
-#### Import data
+### Import data
 
 1. Copy the dataset into the container:
 
@@ -52,7 +50,7 @@
      --db $MONGO_DB --collection $MONGO_COLLECTION --file /tmp/supplies.jsonl
    ```
 
-#### Run the script
+### Run the script
 
 1. Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
@@ -70,7 +68,13 @@
    uv run python main.py
    ```
 
-### Optional steps
+## Optional steps
+
+<!-- no toc -->
+- [Run a command inside the `MongoDB` container](#run-a-command-inside-the-mongodb-container).
+- [Explore the `lab` database](#explore-the-lab-database).
+
+### Run a command inside the `MongoDB` container
 
 1. Connect to the MongoDB shell inside the running container:
 
@@ -82,4 +86,22 @@
    - `mongosh` — the MongoDB shell client
    - `-u $MONGO_USER -p $MONGO_PASSWORD` — authenticates with the credentials from `.env.secret`
 
-2. Open Mongo Express at <http://localhost:8081> (login with `MONGOEXPRESS_USER` / `MONGOEXPRESS_PASSWORD` from `.env.secret`).
+### Explore the `lab` database
+
+1. Open Mongo Express at <http://localhost:8081> (login with `MONGOEXPRESS_USER` / `MONGOEXPRESS_PASSWORD` from `.env.secret`).
+
+2. Select the `lab` database.
+
+   <img src="images/express-database-lab.png" alt="Mongo Express database selection">
+
+3. Click `View`.
+
+4. Click `Advanced`.
+
+5. Write a query, e.g.:
+
+   ```json
+   { "couponUsed": true }
+   ```
+
+6. Click `Find`.
