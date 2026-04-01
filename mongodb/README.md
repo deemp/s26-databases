@@ -6,7 +6,7 @@
 1. [Set up the environment](#set-up-the-environment).
 1. [Run services](#run-services).
 1. [Import data](#import-data).
-1. [Run the script](#run-the-script).
+1. [Run the `Python` script](#run-the-python-script).
 
 ### Set up the environment
 
@@ -50,7 +50,7 @@
      --db $MONGO_DB --collection $MONGO_COLLECTION --file /tmp/supplies.jsonl
    ```
 
-### Run the script
+### Run the `Python` script
 
 1. Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
