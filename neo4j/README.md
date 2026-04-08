@@ -1,5 +1,46 @@
 # `Neo4j`
 
+## Set up `Neo4j` using `Sandbox`
+
+> [CAUTION]
+> The sandbox lives only up to 3 days.
+
+1. [Create a `Neo4j` instance](#create-a-neo4j-instance).
+2. [Connect to the instance](#connect-to-the-instance).
+3. [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser).
+
+### Create a `Neo4j` instance
+
+1. Open <https://sandbox.neo4j.com/> in the browser.
+
+2. Sign up.
+
+3. Go to <https://sandbox.neo4j.com/>.
+
+4. Click `New Project`.
+
+5. Select `Blank Sandbox - Graph Data Science`.
+
+6. Click `Create and Download credentials`.
+
+   Credentials should be downloaded in a `.txt` file.
+
+### Connect to the instance
+
+1. Go to <https://sandbox.neo4j.com/>.
+
+2. Click `Open`
+
+   <img alt="Open the Blank Sandbox" src="./images/open-blank-sandbox.png" style="width:400px"/>
+
+3. Set the values using the values of variables in the downloaded credentials file:
+
+   - `Database user`: `NEO4J_USERNAME`
+
+   - `Password`: `NEO4J_PASSWORD`
+
+4. Click `Connect`.
+
 ## Run using `Docker Compose`
 
 1. [Enter the `neo4j` directory](#enter-the-neo4j-directory).
