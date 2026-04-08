@@ -1,0 +1,20 @@
+services:
+  neo4j:
+    image: neo4j:5
+    container_name: neo4j-lab
+    environment:
+      - NEO4J_AUTH=${NEO4J_USER:?'NEO4J_USER is required'}/${NEO4J_PASSWORD:?'NEO4J_PASSWORD is required'}
+    volumes:
+      - neo4j_data:/data
+    ports:
+      - "${NEO4J_HOST_ADDRESS:-127.0.0.1}:${NEO4J_HTTP_PORT:?'NEO4J_HTTP_PORT is required'}:7474"
+      - "${NEO4J_HOST_ADDRESS:-127.0.0.1}:${NEO4J_BOLT_PORT:?'NEO4J_BOLT_PORT is required'}:7687"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "cypher-shell", "-u", "${NEO4J_USER}", "-p", "${NEO4J_PASSWORD}", "RETURN 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  neo4j_data:
