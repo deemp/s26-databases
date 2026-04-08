@@ -4,13 +4,14 @@
 
 - [Set up `Neo4j` using `Sandbox`](#set-up-neo4j-using-sandbox)
   - [Create a `Neo4j` instance using `Sandbox`](#create-a-neo4j-instance-using-sandbox)
-  - [Connect to the instance using `Sandbox`](#connect-to-the-instance-using-sandbox)
+  - [Open the `Neo4j Browser` in the `Sandbox`](#open-the-neo4j-browser-in-the-sandbox)
 - [Set up `Neo4j` using `Docker Compose`](#set-up-neo4j-using-docker-compose)
   - [Enter the `neo4j` directory](#enter-the-neo4j-directory)
   - [Set up the environment](#set-up-the-environment)
   - [Run `Docker Compose` services](#run-docker-compose-services)
-  - [Set up the database](#set-up-the-database)
+  - [Open the `Neo4j Browser` on `localhost`](#open-the-neo4j-browser-on-localhost)
 - [Use the `Neo4j Browser`](#use-the-neo4j-browser)
+  - [Set up the movies database in the `Neo4j Browser`](#set-up-the-movies-database-in-the-neo4j-browser)
   - [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser)
 - [Connect to `Neo4j` using `VS Code`](#connect-to-neo4j-using-vs-code)
   - [Connect to the `Neo4j` instance in `VS Code`](#connect-to-the-neo4j-instance-in-vs-code)
@@ -23,8 +24,9 @@
 > The sandbox lives only up to 3 days.
 
 1. [Create a `Neo4j` instance using `Sandbox`](#create-a-neo4j-instance-using-sandbox).
-2. [Connect to the instance using `Sandbox`](#connect-to-the-instance-using-sandbox).
-3. [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser).
+2. [Open the `Neo4j Browser` in the `Sandbox`](#open-the-neo4j-browser-in-the-sandbox).
+3. [Set up the movies database in the `Neo4j Browser`](#set-up-the-movies-database-in-the-neo4j-browser).
+4. [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser).
 
 ### Create a `Neo4j` instance using `Sandbox`
 
@@ -42,7 +44,7 @@
 
    Credentials should be downloaded in a `.txt` file.
 
-### Connect to the instance using `Sandbox`
+### Open the `Neo4j Browser` in the `Sandbox`
 
 1. Go to <https://sandbox.neo4j.com/>.
 
@@ -63,8 +65,9 @@
 1. [Enter the `neo4j` directory](#enter-the-neo4j-directory).
 2. [Set up the environment](#set-up-the-environment).
 3. [Run `Docker Compose` services](#run-docker-compose-services).
-4. [Set up the database](#set-up-the-database).
-5. [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser).
+4. [Open the `Neo4j Browser` on `localhost`](#open-the-neo4j-browser-on-localhost).
+5. [Set up the movies database in the `Neo4j Browser`](#set-up-the-movies-database-in-the-neo4j-browser).
+6. [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser).
 
 ### Enter the `neo4j` directory
 
@@ -100,23 +103,26 @@
    docker compose up -d
    ```
 
-### Set up the database
+### Open the `Neo4j Browser` on `localhost`
 
 1. Open <http://localhost:7474> in the browser.
-
-2. Copy the text from [`movies.cypher`](./cypher/movies.cypher).
-
-   Source: [`AhmadTaha96/movies.cypher`](https://gist.github.com/AhmadTaha96/b3e3c033a462a37a582ec80213f42ae7)
-
-3. Paste it into the query field (`neo4j$`) in the browser.
-
-4. To run the script, press `Enter` or click the `Run` button in the top right corner.
 
 ## Use the `Neo4j Browser`
 
 Actions:
 
+- [Set up the movies database in the `Neo4j Browser`](#set-up-the-movies-database-in-the-neo4j-browser)
 - [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser)
+
+### Set up the movies database in the `Neo4j Browser`
+
+1. Copy the text from [`movies.cypher`](./cypher/movies.cypher).
+
+   Source: [`AhmadTaha96/movies.cypher`](https://gist.github.com/AhmadTaha96/b3e3c033a462a37a582ec80213f42ae7)
+
+2. Paste it into the query field (`neo4j$`) in the browser.
+
+3. To run the script, press `Enter` or click the `Run` button in the top right corner.
 
 ### Run a query or a script in the `Neo4j Browser`
 
