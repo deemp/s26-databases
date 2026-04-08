@@ -47,7 +47,7 @@
 2. [Set up the environment](#set-up-the-environment).
 3. [Run `Docker Compose` services](#run-docker-compose-services).
 4. [Set up the database](#set-up-the-database).
-5. [Query the database](#query-the-database).
+5. [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser).
 
 ### Enter the `neo4j` directory
 
@@ -95,13 +95,17 @@
 
 4. To run the script, press `Enter` or click the `Run` button in the top right corner.
 
-### Query the database
+## Use the `Neo4j Browser`
 
-1. Paste into the query field (`neo4j$`):
+Actions:
 
-   ```cypher
-   MATCH (m:Movie) RETURN m.title, m.released ORDER BY m.released
-   ```
+- [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser)
+
+### Run a query or a script in the `Neo4j Browser`
+
+1. Paste the query or the script into the query field (`neo4j$`).
+
+   See query examples in [`cypher/examples.cypher`](./cypher/examples.cypher).
 
 2. To execute the query, press `Enter` or click the `Run` button in the top right corner.
 
