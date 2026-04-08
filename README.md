@@ -16,8 +16,8 @@ The output:
 
 ## Database setups
 
-Follow the instructions in the corresponding directories:
+Follow the instructions in `README.md` in the corresponding directories:
 
-- [`PostgreSQL`](./postgres/README.md)
-- [`MongoDB`](./mongodb/README.md)
-- [`Neo4j`](./neo4j/README.md)
+- `PostgreSQL` - [`./postgres`](./postgres/)
+- `MongoDB` - [`./mongodb`](./mongodb/)
+- `Neo4j` - [`./neo4j`](./neo4j/)
