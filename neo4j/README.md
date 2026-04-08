@@ -112,7 +112,7 @@ Actions:
 ## (Optional) Connect from `VS Code`
 
 > [IMPORTANT]
-> Assumption: you run using `Docker Compose`.
+> Assumption: you [set up `Neo4j` using `Docker Compose`](#set-up-neo4j-using-docker-compose).
 
 1. [Connect to the database](#connect-to-the-database).
 2. [Run a query](#run-a-query).
