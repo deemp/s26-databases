@@ -2,10 +2,25 @@
 
 ## Run using `Docker Compose`
 
-1. [Set up the environment](#set-up-the-environment).
-2. [Run `Docker Compose` services](#run-docker-compose-services).
-3. [Set up the database](#set-up-the-database).
-4. [Query the database](#query-the-database).
+1. [Enter the `neo4j` directory](#enter-the-neo4j-directory).
+2. [Set up the environment](#set-up-the-environment).
+3. [Run `Docker Compose` services](#run-docker-compose-services).
+4. [Set up the database](#set-up-the-database).
+5. [Query the database](#query-the-database).
+
+### Enter the `neo4j` directory
+
+1. Clone this repository:
+
+   ```terminal
+   git clone https://github.com/deemp/s26-databases
+   ```
+
+2. Enter the `neo4j` directory:
+
+   ```terminal
+   cd s26-databases/neo4j
+   ```
 
 ### Set up the environment
 
