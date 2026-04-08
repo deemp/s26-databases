@@ -14,10 +14,10 @@ The output:
 - [Exercise 1](./docs/diagrams/out/ex1/ex1.svg)
 - [Exercise 2](./docs/diagrams/out/ex2/ex2.svg)
 
-## Lab 4
+## Database setups
 
-1. Clone this repo.
-2. Open this repo in `VS Code`.
-3. Open the `VS Code Terminal`.
-4. Switch to the `lab-4` directory.
-5. Follow the instructions in [`lab-4/README.md`](./lab-4/README.md).
+Follow the instructions in the corresponding directories:
+
+- [`PostgreSQL`](./postgres/README.md)
+- [`MongoDB`](./mongodb/README.md)
+- [`Neo4j`](./neo4j/README.md)
