@@ -1,5 +1,22 @@
 # `Neo4j`
 
+<h2>Table of contents</h2>
+
+- [Set up `Neo4j` using `Sandbox`](#set-up-neo4j-using-sandbox)
+  - [Create a `Neo4j` instance using `Sandbox`](#create-a-neo4j-instance-using-sandbox)
+  - [Connect to the instance using `Sandbox`](#connect-to-the-instance-using-sandbox)
+- [Set up `Neo4j` using `Docker Compose`](#set-up-neo4j-using-docker-compose)
+  - [Enter the `neo4j` directory](#enter-the-neo4j-directory)
+  - [Set up the environment](#set-up-the-environment)
+  - [Run `Docker Compose` services](#run-docker-compose-services)
+  - [Set up the database](#set-up-the-database)
+- [Use the `Neo4j Browser`](#use-the-neo4j-browser)
+  - [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser)
+- [Connect to `Neo4j` using `VS Code`](#connect-to-neo4j-using-vs-code)
+  - [Connect to the `Neo4j` instance in `VS Code`](#connect-to-the-neo4j-instance-in-vs-code)
+  - [Run a query in the file](#run-a-query-in-the-file)
+  - [Run all queries in the file](#run-all-queries-in-the-file)
+
 ## Set up `Neo4j` using `Sandbox`
 
 > [CAUTION]
