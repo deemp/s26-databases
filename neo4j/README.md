@@ -109,7 +109,7 @@ Actions:
 
 2. To execute the query, press `Enter` or click the `Run` button in the top right corner.
 
-## (Optional) Connect from `VS Code`
+## Connect to `Neo4j` using `VS Code`
 
 > [IMPORTANT]
 > Assumption: you [set up `Neo4j` using `Docker Compose`](#set-up-neo4j-using-docker-compose).
