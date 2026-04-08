@@ -10,10 +10,10 @@
   - [Set up the environment](#set-up-the-environment)
   - [Run `Docker Compose` services](#run-docker-compose-services)
   - [Open the `Neo4j Browser` on `localhost`](#open-the-neo4j-browser-on-localhost)
-- [Use the `Neo4j Browser`](#use-the-neo4j-browser)
+- [Interact with the `Neo4j` instance using the `Neo4j Browser`](#interact-with-the-neo4j-instance-using-the-neo4j-browser)
   - [Set up the movies database in the `Neo4j Browser`](#set-up-the-movies-database-in-the-neo4j-browser)
   - [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser)
-- [Connect to `Neo4j` using `VS Code`](#connect-to-neo4j-using-vs-code)
+- [Interact with the `Neo4j` instance using `VS Code`](#interact-with-the-neo4j-instance-using-vs-code)
   - [Connect to the `Neo4j` instance in `VS Code`](#connect-to-the-neo4j-instance-in-vs-code)
   - [Run a query in the file](#run-a-query-in-the-file)
   - [Run all queries in the file](#run-all-queries-in-the-file)
@@ -107,7 +107,7 @@
 
 1. Open <http://localhost:7474> in the browser.
 
-## Use the `Neo4j Browser`
+## Interact with the `Neo4j` instance using the `Neo4j Browser`
 
 Actions:
 
@@ -132,7 +132,7 @@ Actions:
 
 2. To execute the query, press `Enter` or click the `Run` button in the top right corner.
 
-## Connect to `Neo4j` using `VS Code`
+## Interact with the `Neo4j` instance using `VS Code`
 
 > [!IMPORTANT]
 > Assumption: you [set up `Neo4j` using `Docker Compose`](#set-up-neo4j-using-docker-compose).
