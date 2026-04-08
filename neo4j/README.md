@@ -103,7 +103,7 @@ Interaction:
    cp .env.example .env
    ```
 
-2. Set `NEO4J_PASSWORD` in `.env`.
+2. Set `NEO4J_PASSWORD` (at least 8 characters) in `.env`.
 
 ### Run `Docker Compose` services
 
