@@ -30,7 +30,7 @@
    cp .env.example .env
    ```
 
-2. Edit `NEO4J_PASSWORD` and `NEO4J_USER`.
+2. Set `NEO4J_PASSWORD` in `.env`.
 
 ### Run `Docker Compose` services
 
