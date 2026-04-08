@@ -63,3 +63,48 @@
    ```
 
 2. To execute the query, press `Enter` or click the `Run` button in the top right corner.
+
+## (Optional) Connect from `VS Code`
+
+> [IMPORTANT]
+> Assumption: you run using `Docker Compose`.
+
+1. [Connect to the database](#connect-to-the-database).
+2. [Run a query](#run-a-query).
+3. [Run all queries](#run-all-queries).
+
+### Connect to the database
+
+1. Install the `VS Code` extension `neo4j-extensions.neo4j-for-vscode`.
+
+2. Run using the `Command Palette`: `Neo4j: Create new connection`.
+
+3. Set the values:
+
+   - `Display name`: `Movies`
+
+   - `Scheme`: `neo4j://`
+
+   Use the values from `.env`:
+
+   - `Host`: `NEO4J_HOST_ADDRESS`
+
+   - `Port`: `NEO4J_BOLT_PORT`
+
+   - `User`: `NEO4J_USER`
+
+   - `Password`: `NEO4J_PASSWORD`
+
+4. Click `Save & Connect`.
+
+### Run a query
+
+1. Open [`cypher/examples.cypher`](./cypher/examples.cypher).
+
+2. Select the `Example 1` query.
+
+3. To run the selected query, press `Ctrl+Enter`.
+
+### Run all queries
+
+1. To run all queries in the file, press `Ctrl+Alt+Enter`.
