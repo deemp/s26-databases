@@ -18,6 +18,18 @@
   - [Run a query in the file](#run-a-query-in-the-file)
   - [Run all queries in the file](#run-all-queries-in-the-file)
 
+<h2 id="setup-and-interaction-options">Setup and interaction options</h2>
+
+Setup:
+
+- Option 1: [Set up `Neo4j` using `Sandbox`](#set-up-neo4j-using-sandbox)
+- Option 2: [Set up `Neo4j` using `Docker Compose`](#set-up-neo4j-using-docker-compose)
+
+Interaction:
+
+- Option 1: [Interact with the `Neo4j` instance using the `Neo4j Browser`](#interact-with-the-neo4j-instance-using-the-neo4j-browser)
+- Option 2: [Interact with the `Neo4j` instance using `VS Code`](#interact-with-the-neo4j-instance-using-vs-code)
+
 ## Set up `Neo4j` using `Sandbox`
 
 > [!CAUTION]
