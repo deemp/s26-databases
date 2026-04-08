@@ -19,7 +19,7 @@
 
 ## Set up `Neo4j` using `Sandbox`
 
-> [CAUTION]
+> [!CAUTION]
 > The sandbox lives only up to 3 days.
 
 1. [Create a `Neo4j` instance using `Sandbox`](#create-a-neo4j-instance-using-sandbox).
@@ -128,7 +128,7 @@ Actions:
 
 ## Connect to `Neo4j` using `VS Code`
 
-> [IMPORTANT]
+> [!IMPORTANT]
 > Assumption: you [set up `Neo4j` using `Docker Compose`](#set-up-neo4j-using-docker-compose).
 
 1. [Connect to the `Neo4j` instance in `VS Code`](#connect-to-the-neo4j-instance-in-vs-code).
