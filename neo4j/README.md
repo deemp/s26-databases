@@ -5,11 +5,11 @@
 > [CAUTION]
 > The sandbox lives only up to 3 days.
 
-1. [Create a `Neo4j` instance](#create-a-neo4j-instance).
-2. [Connect to the instance](#connect-to-the-instance).
+1. [Create a `Neo4j` instance using `Sandbox`](#create-a-neo4j-instance-using-sandbox).
+2. [Connect to the instance using `Sandbox`](#connect-to-the-instance-using-sandbox).
 3. [Run a query or a script in the `Neo4j Browser`](#run-a-query-or-a-script-in-the-neo4j-browser).
 
-### Create a `Neo4j` instance
+### Create a `Neo4j` instance using `Sandbox`
 
 1. Open <https://sandbox.neo4j.com/> in the browser.
 
@@ -25,7 +25,7 @@
 
    Credentials should be downloaded in a `.txt` file.
 
-### Connect to the instance
+### Connect to the instance using `Sandbox`
 
 1. Go to <https://sandbox.neo4j.com/>.
 
