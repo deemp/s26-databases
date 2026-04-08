@@ -117,7 +117,7 @@ Interaction:
 
 ### Open the `Neo4j Browser` on `localhost`
 
-1. Open <http://localhost:7474> in the browser.
+1. Open <http://localhost:7474/browser/> in the browser.
 
 ## Interact with the `Neo4j` instance using the `Neo4j Browser`
 
