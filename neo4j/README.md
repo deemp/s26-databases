@@ -85,7 +85,7 @@
 
 ### Set up the database
 
-1. Open `http://localhost:7474` in the browser.
+1. Open <http://localhost:7474> in the browser.
 
 2. Copy the text from [`movies.cypher`](./cypher/movies.cypher).
 
