@@ -41,7 +41,7 @@
 
 4. Click `Connect`.
 
-## Run using `Docker Compose`
+## Set up `Neo4j` using `Docker Compose`
 
 1. [Enter the `neo4j` directory](#enter-the-neo4j-directory).
 2. [Set up the environment](#set-up-the-environment).
