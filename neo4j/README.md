@@ -114,11 +114,11 @@ Actions:
 > [IMPORTANT]
 > Assumption: you [set up `Neo4j` using `Docker Compose`](#set-up-neo4j-using-docker-compose).
 
-1. [Connect to the database](#connect-to-the-database).
-2. [Run a query](#run-a-query).
-3. [Run all queries](#run-all-queries).
+1. [Connect to the `Neo4j` instance in `VS Code`](#connect-to-the-neo4j-instance-in-vs-code).
+2. [Run a query in the file](#run-a-query-in-the-file).
+3. [Run all queries in the file](#run-all-queries-in-the-file).
 
-### Connect to the database
+### Connect to the `Neo4j` instance in `VS Code`
 
 1. Install the `VS Code` extension `neo4j-extensions.neo4j-for-vscode`.
 
@@ -142,7 +142,7 @@ Actions:
 
 4. Click `Save & Connect`.
 
-### Run a query
+### Run a query in the file
 
 1. Open [`cypher/examples.cypher`](./cypher/examples.cypher).
 
@@ -150,6 +150,6 @@ Actions:
 
 3. To run the selected query, press `Ctrl+Enter`.
 
-### Run all queries
+### Run all queries in the file
 
 1. To run all queries in the file, press `Ctrl+Alt+Enter`.
