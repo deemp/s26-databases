@@ -7,4 +7,4 @@ ORDER BY m.released;
 // Example 2
 // -- Find all actors in "The Matrix"
 MATCH (a:Person)-[:ACTED_IN]->(m:Movie {title: "The Matrix"})
-RETURN a.name
+RETURN a.name;
