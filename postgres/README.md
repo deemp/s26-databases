@@ -244,7 +244,7 @@ run in the terminal:
 
 #### 2.3.3. Get ERD in Chen notation
 
-1. [Go to `postgres`](#212-go-to-postgres).
+1. [Go to `postgres`](#232-go-to-postgres).
 2. Right-click `postgres`.
 3. Click `ERD for Database`.
 4. Click `Cardinality Notation`.
@@ -256,7 +256,7 @@ run in the terminal:
 
 #### 2.3.4. Run queries
 
-1. [Go to `postgres`](#212-go-to-postgres).
+1. [Go to `postgres`](#232-go-to-postgres).
 2. Right-click `postgres`.
 3. Click `Query Tool`.
 4. Write an `SQL` script.
@@ -288,8 +288,8 @@ See `VS Code` [installation instructions](https://code.visualstudio.com/download
 
 Connect using any of these methods:
 
-- [Connect using `ms-ossdata.vscode-pgsql`](#2221-connect-using-ms-ossdatavscode-pgsql).
-- [Connect using `mtxr.sqltools`](#2222-connect-using-mtxrsqltools).
+- [Connect using `ms-ossdata.vscode-pgsql`](#2421-connect-using-ms-ossdatavscode-pgsql).
+- [Connect using `mtxr.sqltools`](#2422-connect-using-mtxrsqltools).
 
 ##### 2.4.2.1. Connect using `ms-ossdata.vscode-pgsql`
 
