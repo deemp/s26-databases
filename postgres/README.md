@@ -99,12 +99,12 @@
 
 #### 1.1.3. Open the lab directory
 
-1. To navigate to the `lab-4` directory,
+1. To navigate to the `postgres` directory,
 
    run in the terminal:
 
    ```terminal
-   cd lab-4
+   cd postgres
    ```
 
 #### 1.1.4. Create a `.env` file
