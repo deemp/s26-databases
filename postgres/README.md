@@ -135,12 +135,12 @@
 
 1. [Open the lab directory](#113-open-the-lab-directory).
 
-2. To remove containers, volumes, images,
+2. To remove containers and volumes,
 
    run in the terminal:
 
    ```terminal
-   docker compose down -v --rmi all
+   docker compose down -v
    ```
 
 #### 1.1.7. Start all services
